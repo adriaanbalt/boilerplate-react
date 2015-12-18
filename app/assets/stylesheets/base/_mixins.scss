@@ -1,0 +1,99 @@
+/*
+ * Write your utility mixins here.
+ * Example included below
+ */
+
+@mixin circle {
+  border-radius: 100%;
+  border: 1px solid $black;
+}
+
+@mixin clearfix {
+// For modern browsers
+  &:before,
+  &:after {
+    content:" ";
+    display:table;
+  }
+
+  &:after {
+    clear:both;
+  }
+
+  // For IE 6/7 (trigger hasLayout)
+  & {
+    *zoom:1;
+  }
+}
+
+
+//Triangle
+@mixin css-triangle($orientation, $base: 60px, $height: 30px, $color: #fff) {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  background: transparent;
+
+  @if $orientation == "top" {
+    border-width: 0 ($base / 2) $height ($base / 2);
+    border-color: transparent transparent $color transparent;
+  }
+  @if $orientation == "bottom" {
+    border-width: $height ($base / 2) 0 ($base / 2);
+    border-color: $color transparent transparent transparent;
+  }
+  @if $orientation == "left" {
+    border-width: ($base / 2) $height ($base / 2) 0;
+    border-color: transparent $color transparent transparent;
+  }
+  @if $orientation == "right" {
+    border-width: ($base / 2) 0 ($base / 2) $height;
+    border-color: transparent transparent transparent $color;
+  }
+}
+
+//EM
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+// Clear
+@mixin clear {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+// Box Sizing
+@mixin box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Transform
+@mixin css-transform ($x, $y: 0) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+}
+
+// Background Size Cover
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Transition
+@mixin css-transition() {
+  -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}

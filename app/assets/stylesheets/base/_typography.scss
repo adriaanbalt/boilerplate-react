@@ -1,0 +1,80 @@
+/*
+ *
+ * Typography resets, font-face declarations and helpful mixins
+ *
+ */
+
+@include font-face(HelveticaNeue, '../fonts/HelveticaNeueLTStd-Roman');
+@include font-face(HelveticaNeue, '../fonts/HelveticaNeueLTStd-Roman', normal);
+@include font-face(HelveticaNeue, '../fonts/HelveticaNeueLTStd-Bd', bold);
+@include font-face(HelveticaNeue, '../fonts/HelveticaNeueLTStd-Th', 100);
+@include font-face('Glyphicons Halflings', '../fonts/glyphicons-halflings-regular');
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,500italic,400);
+
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ *
+ * Begin base html element resets
+ * Outside of this file, select on *classes* versus native HTML elements
+ *
+ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-smoothing; // <- _mixins.scss
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+small {
+  font-size: 0.75em;
+  margin-top: 0.25em;
+}
+
+h1, h2, h3 {
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol {
+  margin-bottom: 0;
+}
+
+
+h1 {
+	font-size: 32px;
+	letter-spacing: 1px;
+}
+h2 {
+  font-family: HelveticaNeue;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 0px;
+  line-height: 3em;
+}
+h3 {
+	font-size: 24px;
+	letter-spacing: 2px;
+}
+h4 {
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}

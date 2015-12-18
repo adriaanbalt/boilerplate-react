@@ -1,0 +1,11 @@
+@mixin aspectratio($width, $height) {
+	$padding: percentage($height / $width);
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: $padding !important;
+        z-index: -999999;
+        position: relative;
+    }
+}

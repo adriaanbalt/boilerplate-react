@@ -1,0 +1,189 @@
+.editBtn {
+  position: absolute;
+  top: 125px;
+  left: 20px;
+  z-index: 1;
+}
+
+.moduleContainer {
+  @include outer-container($wrapper)
+}
+
+
+/*
+ * Begin icons
+ */
+
+[class^="iconb2b-"]:before, [class*=" iconb2b-"]:before {
+  font-family: 'samsungb2b';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconb2b-starFull:before {
+  content: "\e61f";
+}
+
+.iconb2b-plus:before {
+  content: "\e622";
+}
+
+.iconb2b-minus:before {
+  content: "\e623";
+}
+
+.iconb2b-paper:before {
+  content: "\e624";
+}
+
+.iconb2b-starOutline:before {
+  content: "\e625";
+}
+
+.iconb2b-chart:before {
+  content: "\e626";
+}
+
+.iconb2b-browser:before {
+  content: "\e627";
+}
+
+.iconb2b-cerrar:before {
+  content: "\e61d";
+}
+
+.iconb2b-menu-cerrar:before {
+  content: "\e61e";
+}
+
+.iconb2b-pag-ant:before {
+  content: "\e620";
+}
+
+.iconb2b-pag-sig:before {
+  content: "\e621";
+}
+
+.iconb2b-eliminar:before {
+  content: "\e600";
+}
+
+.iconb2b-important:before {
+  content: "\e601";
+}
+
+.iconb2b-reasignar:before {
+  content: "\e602";
+}
+
+.iconb2b-responder:before {
+  content: "\e603";
+}
+
+.iconb2b-respuesta-automatica:before {
+  content: "\e604";
+}
+
+.iconb2b-etiqueta:before {
+  content: "\e605";
+}
+
+.iconb2b-alert:before {
+  content: "\e606";
+}
+
+.iconb2b-user:before {
+  content: "\e607";
+}
+
+.iconb2b-asignados:before {
+  content: "\e608";
+}
+
+.iconb2b-ayuda:before {
+  content: "\e609";
+}
+
+.iconb2b-bandeja:before {
+  content: "\e60a";
+}
+
+.iconb2b-canal:before {
+  content: "\e60b";
+}
+
+.iconb2b-chat:before {
+  content: "\e60c";
+}
+
+.iconb2b-reloj:before {
+  content: "\e60d";
+}
+
+.iconb2b-configuracion:before {
+  content: "\e60e";
+}
+
+.iconb2b-configuracionInicial_24x24:before {
+  content: "\e60f";
+}
+
+.iconb2b-estadisticas:before {
+  content: "\e610";
+}
+
+.iconb2b-important-select:before {
+  content: "\e611";
+}
+
+.iconb2b-remover-etiqueta:before {
+  content: "\e612";
+}
+
+.iconb2b-respuestas:before {
+  content: "\e613";
+}
+
+.iconb2b-search:before {
+  content: "\e614";
+}
+
+.iconb2b-soporte:before {
+  content: "\e615";
+}
+
+.iconb2b-valor1:before {
+  content: "\e616";
+}
+
+.iconb2b-valor2:before {
+  content: "\e617";
+}
+
+.iconb2b-valor3:before {
+  content: "\e618";
+}
+
+.iconb2b-valor4:before {
+  content: "\e619";
+}
+
+.iconb2b-valor5:before {
+  content: "\e61a";
+}
+
+.iconb2b-wiki:before {
+  content: "\e61b";
+}
+
+.iconb2b-write:before {
+  content: "\e61c";
+}

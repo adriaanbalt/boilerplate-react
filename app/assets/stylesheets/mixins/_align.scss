@@ -1,0 +1,27 @@
+// Vertical Alginment for IE9+
+@mixin vertical-align( $distance ) {
+	position: relative;
+	top: $distance;
+	-webkit-transform: translateY( $distance * -1 );
+	-ms-transform: translateY( $distance * -1 );
+	transform: translateY( $distance * -1 );
+}
+// Horizontal Alginment for IE9+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.valign {
+	vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+}
+.vcontent {
+	vertical-align: middle;
+	display: inline-block;
+}
