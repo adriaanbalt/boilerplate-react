@@ -29,8 +29,7 @@ export default class Home extends Component {
   render () {
     return (
       <div className='Home Page'>
-        <div className='Home-container'>
-        </div>
+        <div className='Home-container'>{ this.state.title }</div>
       </div>
     );
   }
