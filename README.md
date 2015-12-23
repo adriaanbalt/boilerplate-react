@@ -2,14 +2,25 @@
 
 ## Installation
 
+```
 $ npm install
 $ npm start
+```
 
 Go to `localhost:3000`
 
-## Node Modules
+## Goals
 
+* Create a new page
+* Load new page via router with unique URL
+* Create component
+* Load component onto new page
+* Component must receive data from `DATA.json`
 
-## Requirements
+### Extra Credit
+
+* Component uses an array of data with a `map()`
+
+### Requirements
 * Node: 4.2.1
 * NPM: 2.14.7
