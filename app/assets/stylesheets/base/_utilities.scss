@@ -1,15 +1,3 @@
-.editBtn {
-  position: absolute;
-  top: 125px;
-  left: 20px;
-  z-index: 1;
-}
-
-.moduleContainer {
-  @include outer-container($wrapper)
-}
-
-
 /*
  * Begin icons
  */
