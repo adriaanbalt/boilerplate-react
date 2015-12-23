@@ -31,6 +31,7 @@ import Home from './pages/Home';
  ** @TODO: enforce consistent name for module/component/UI element
  **/
 
+// after JSON data load is complete, create the page.
 let jsonLoadComplete = (o) => {
 	React.render((
 	  <Router history={history}>
@@ -42,6 +43,8 @@ let jsonLoadComplete = (o) => {
 	), document.body);
 }
 
+
+// Data to load before the website loads
 ActionCreator.loadData({
   file_path: '/assets/data/DATA.json',
   callback: jsonLoadComplete
