@@ -2,6 +2,11 @@
 
 ## Installation
 
+$ npm install
+$ npm start
+
+Go to `localhost:3000`
+
 ## Node Modules
 
 
