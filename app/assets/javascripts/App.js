@@ -9,10 +9,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 
-const App = React.createClass({
+class App {
 
-  mixins: [Router.State],
-
+  construoctor() {
+    this.mixins = [Router.State];
+  }
   render () {
     const pathname = (this.props.location.pathname === "/" ? 'home' : this.props.location);
     return (
@@ -27,6 +28,6 @@ const App = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default App;
