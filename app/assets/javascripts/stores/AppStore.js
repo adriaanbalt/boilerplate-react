@@ -28,7 +28,7 @@ class AppStore {
     this.dataLoaded = (data) => {
       if ( data ) {
         console.log ( "websiteLoaded" , data )
-        this.title = data.title;
+        this = data;
       }
     },
 
