@@ -7,11 +7,12 @@ import AppStore from './stores/AppStore';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
 import Home from './pages/Home';
 
-class App {
+export default class App {
 
-  construoctor() {
+  constructor() {
     this.mixins = [Router.State];
   }
   render () {
@@ -29,5 +30,3 @@ class App {
     );
   }
 }
-
-export default App;

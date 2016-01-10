@@ -9,7 +9,8 @@ class AppActions {
      ********************************************************************/
     this.generateActions(
       'loadData',
-      'websiteLoaded'
+      'websiteLoaded',
+      'toggleNav'
     )
   }
 }

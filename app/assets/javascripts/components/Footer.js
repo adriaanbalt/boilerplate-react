@@ -24,9 +24,11 @@ export default class Footer extends Component {
 	}
 
 	 render () {
+	 	console.log("footer render")
 		 return (
 			 <footer>
 				 <div className="inner">
+				 	&copy; 2016 Jeesun Kim
 				 </div>
 			 </footer>
 		 )

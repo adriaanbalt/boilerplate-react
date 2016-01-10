@@ -1,3 +1,12 @@
 {
-	"title":"Hello World"
+	"title":"Hello World",
+	"name": "Jeesun",
+	"projects": [{
+		"projectId": 1
+	}],
+	"nav": {
+		"blog": "blog",
+		"food": "food",
+		"projects": "projects" 
+	}
 }

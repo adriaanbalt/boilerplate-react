@@ -13,7 +13,12 @@ import Storage from '../lib/Storage';
  ********************************************************************/
 class AppStore {
   constructor () {
-    this.title = "";
+
+    this.data;
+    
+    this.isNavOpen = false;
+    this.title;
+
     this.loadJson = ( file_path, dataLoaded, callback ) => {
       // @TODO check cookie
       Storage.loadJson({
@@ -27,23 +32,30 @@ class AppStore {
 
     this.dataLoaded = (data) => {
       if ( data ) {
-        console.log ( "websiteLoaded" , data )
-        this = data;
+        console.log ( "websiteLoaded" , data );
+        this.data = data;
+        this.title = data.title;;
       }
     },
 
     this.bindListeners({
-      loadData: ActionCreator.LOAD_DATA
+      loadData: ActionCreator.LOAD_DATA,
+      toggleNav: ActionCreator.TOGGLE_NAV
     })
 
   }
 
   getProjectById( id ){
-    return this.projects.filter(project => project.projectId === id)[0]
+    return this.data.projects.filter(project => project.projectId === id)[0]
   }
 
   loadData ( o ) {
     this.loadJson( o.file_path, this.dataLoaded, o.callback );
+  }
+
+  toggleNav () {
+    this.isNavOpen = !this.isNavOpen;
+    console.log(this.isNavOpen, "NavOpen");
   }
 
 }
