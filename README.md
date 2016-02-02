@@ -26,9 +26,6 @@ This application uses the following tools:
 * [Flux-style data management](http://facebook.github.io/flux/)
 * [Webpack](http://github.com/webpack/webpack) JavaScript compiler
 * [react-hot-loader](http://github.com/gaearon/react-hot-loader) Reload browser
-* [Bourbon / Neat](http://bourbon.io) SCSS mixins
-* [Docker Toolbox](https://www.docker.com/docker-toolbox)
-* [docker-osx-dev](https://github.com/brikis98/docker-osx-dev)
 
 ## Installation
 
