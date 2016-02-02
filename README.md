@@ -238,12 +238,6 @@ I add the precursor `icon-` to associate icons that have short names, like `Book
 When we create new icons, we add them to the same icons folder.  After adding them, you must create the classes and reference their corresponding mixin as follows:
 
 ```css
-.icon-icon-slideshow-left-2x {
-  @include get-sprite( icon-slideshow-left-2x );
-}
-```
-... or ... 
-```css
 .icon-Home {
   @include get-sprite( Home );
 }
