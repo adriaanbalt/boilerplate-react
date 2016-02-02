@@ -8,24 +8,6 @@
   border: 1px solid $black;
 }
 
-@mixin clearfix {
-// For modern browsers
-  &:before,
-  &:after {
-    content:" ";
-    display:table;
-  }
-
-  &:after {
-    clear:both;
-  }
-
-  // For IE 6/7 (trigger hasLayout)
-  & {
-    *zoom:1;
-  }
-}
-
 
 //Triangle
 @mixin css-triangle($orientation, $base: 60px, $height: 30px, $color: #fff) {
@@ -91,9 +73,9 @@ $browser-context: 16;
 }
 
 // Transition
-@mixin css-transition() {
-  -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+@mixin css-transition( $time:0.5s ) {
+  -webkit-transition: background-color $time ease;
+    -moz-transition: background-color $time ease;
+    -o-transition: background-color $time ease;
+    transition: background-color $time ease;
 }

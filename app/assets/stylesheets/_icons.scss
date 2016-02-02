@@ -1,0 +1,15 @@
+$icons: sprite-map("icons/*.png", $layout: smart);
+
+.icon {
+	background: $icons;
+	position: relative;
+	display: inline-block;
+}
+
+.icon-icon-Home {
+	@include get-sprite( Home );
+	&:hover {
+		@include get-sprite( Home );
+	}
+}
+

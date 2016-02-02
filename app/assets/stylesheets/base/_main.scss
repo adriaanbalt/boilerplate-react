@@ -21,3 +21,7 @@ ul, ol, li {
 a {
   @include user-select(none);
 }
+
+* {
+	transition: all 300ms;
+}
