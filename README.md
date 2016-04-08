@@ -120,37 +120,6 @@ You may need to alias `gulp` to `node_modules/.bin/gulp`, or `npm install -g gul
 
 Start editing assets and views from the `gulp/assets` folder. Files compile to `public`.
 
-## Application Logic & Routing
-If you need to add a new route, add it to `index.js`. Application bootstrapping described below:
-
-> boot·strap:
-> /ˈbo͞otˌstrap/
-> a technique of loading a program into a computer by means of a few initial instructions that enable the introduction of the > rest of the program.
-
-Once React loads and bundle.js is loaded into the browser, routing is handled client-side by the rules defined in React.render().
-
-Add a 'page' and its route in the `React.render()` method. Nest routes and add query parameters (e.g., `:module` param in the URI `/page/:sub-page`). Query parameters are passed into the rendered component as `this.props.routeParams`.
-
-## Flux Data Flow: An Introduction
-We're using [Alt.js](http://github.com/goatslacker/alt), an implementation of Facebook's [Flux](https://facebook.github.io/flux/) architecture.
-
-From app/assets/javascripts/lib/alt.js:
-
-                              .__   __
-                       _____  |  |_/  |_
-                       \__  \ |  |\   __\
-                        / __ \|  |_|  |
-                       (____ /____/\__|
-                            \/
-
-[Alt: Isomorphic Flux Implementation](http://github.com/goatslacker/alt)
-
-`app/assets/javascripts/lib/alt.js`: creates an Alt/Flux instance to manage application data flow, from view to Action Creator to the store.
-
-Example Data Flow via alt:
-
-view --> action --> dispatcher --> store --> view
-
 ## Code Structure
 
 #### 1. Actions
