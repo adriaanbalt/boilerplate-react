@@ -13,11 +13,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,500italic,400);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-// @include font-face(ProximaNova, '../fonts/proximanova-regular-webfont');
-// @include font-face(ProximaNova, '../fonts/proximanova-regular-webfont', normal);
-// @include font-face(ProximaNova, '../fonts/proximanova-bold-webfont', bold);
-// @include font-face(ProximaNova, '../fonts/proximanova-semibold-webfont', medium);
-
 
 @mixin font-smoothing {
   -webkit-font-smoothing: antialiased;
