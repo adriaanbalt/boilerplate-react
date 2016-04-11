@@ -7,12 +7,14 @@ import AppStore from './stores/AppStore';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
 import Home from './pages/Home';
 
-const App = React.createClass({
+export default class App {
 
-  mixins: [Router.State],
-
+  constructor() {
+    this.mixins = [Router.State];
+  }
   render () {
     const pathname = (this.props.location.pathname === "/" ? 'home' : this.props.location);
     return (
@@ -27,6 +29,4 @@ const App = React.createClass({
       </div>
     );
   }
-});
-
-export default App;
+}

@@ -3,11 +3,9 @@
 import React, {Component} from 'react';
 import AppStore from '../stores/AppStore';
 import cx from 'classnames';
-import ActionCreator from '../actions/AppActions';
 import { Link } from 'react-router';
-import Nav from './Nav';
 
-export default class Header extends Component {
+export default class Blog extends Component {
 
 	constructor (props) {
 		super(props);
@@ -15,7 +13,6 @@ export default class Header extends Component {
 		this._onChange = (o) => {
 			this.setState( AppStore.getState() );
 		}
-		
 	}
 
 	componentDidMount () {
@@ -27,15 +24,12 @@ export default class Header extends Component {
 	}
 
 	 render () {
+	 	console.log("Blog render")
 		 return (
-			 <header>
-				<Nav />
-				{
-				 	this.state.isNavOpen
-						&&				 
-				 	<h1>Logo</h1>
-				}
-			 </header>
+			 <footer>
+				 <div className="inner">
+				 </div>
+			 </footer>
 		 )
 	 }
 };
