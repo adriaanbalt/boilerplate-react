@@ -1,16 +1,14 @@
 'use strict';
 
-import React, {Component} from 'react';
-import { Link } from 'react-router';
+import React from 'react';
 
-export default class Footer extends Component {
-
-	 render () {
-		 return (
-			 <footer>
-				 <div className="inner">
-				 </div>
-			 </footer>
-		 )
-	 }
+function Footer( props ) {
+	return (
+		<div className='Footer'>
+			<div className="inner">
+			</div>
+		</div>
+	);
 };
+
+export default Footer;

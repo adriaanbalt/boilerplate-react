@@ -1,16 +1,14 @@
 'use strict';
 
-import React, {Component} from 'react';
-import { Link } from 'react-router';
+import React from 'react';
 
-export default class Header extends Component {
-
-	 render () {
-		 return (
-			 <header>
-				 <div className="inner">
-				 </div>
-			 </header>
-		 )
-	 }
+function Header( props ) {
+	return (
+		<div className='Header'>
+			<div className="inner">
+			</div>
+		</div>
+	);
 };
+
+export default Header;

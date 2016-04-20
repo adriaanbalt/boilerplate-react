@@ -1,12 +1,11 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Icon extends Component {
-
-	render () {
-		return (
-			<span className={`icon icon-${ this.props.name }`}></span>
-		)
-	}
+function Icon( props ) {
+	return (
+		<span className={`icon icon-${ props.name }`}></span>
+	);
 };
+
+export default Icon;
