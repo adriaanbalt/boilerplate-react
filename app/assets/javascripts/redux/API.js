@@ -6,7 +6,6 @@
 import request from 'superagent';
 import Promise from 'bluebird';
 import _ from 'lodash';
-import shortid from 'shortid';
 
 import pathJoin from '../lib/utils/pathJoin';
 import isJSON from '../lib/utils/isJSON';
