@@ -18,35 +18,38 @@
  **/
 
 import React from 'react';
+import { Provider } from 'react-redux';
+import { configureStore } from './redux/Store';
+import { DevTools } from './redux/DevTools';
+
+// React's library for handling direct DOM interaction (vs. Virual DOM interaction),
+// render alows us to place our React app into the DOM
+import { render } from 'react-dom';
+
+// React's front end routing handler
+import { Router, Route, browserHistory } from 'react-router';
+
 import App from './App';
-import ActionCreator from './actions/AppActions';
-import { Router, Route, DefaultRoute } from 'react-router';
-import { history } from 'react-router/lib/HashHistory';
+import Config from './lib/Config';
+import pathJoin from './lib/utils/pathJoin';
 
-import Home from './pages/Home';
+import Home from './home/Home';
 
-/**
- ** Samsung-specific `modules` (i.e., React components) included below and rendered in <Router />
- ** All modules / Samsung UI elements served via `/modules/${module-name}`
- ** @TODO: enforce consistent name for module/component/UI element
- **/
+// If we ever wanted to do server-side rendering, the intial state would get passed to the front end by passing
+// the server-side store to the "__INITIAL_STATE__" client-side global variable via a script tag and "hydrating"
+// our client-side state with it here
+// const store = configureStore(window.__INITIAL_STATE__ || { user: null, posts: []});
+const store = configureStore();
 
-// after JSON data load is complete, create the page.
-let jsonLoadComplete = (o) => {
-	React.render((
-	  <Router history={history}>
-		<Route path="/" component={App}>
-		  <Route name="home" path="/home" component={Home}/>
-		  <Route path="/" component={Home} />
-		</Route>
-	  </Router>
-	), document.body);
-}
-
-
-// Data to load before the website loads
-ActionCreator.loadData({
-  file_path: '/assets/data/DATA.json',
-  callback: jsonLoadComplete
-});
-
+render((
+    <Provider store={store}>
+        <div>
+            <Router history={browserHistory}>
+          		<Route component={ App }>
+          			<Route name="home" path={`${ Config.constants.ROOT_PATH }`} component={ Home } />
+        		</Route>
+            </Router>
+            <DevTools />
+        </div>
+    </Provider>
+), document.getElementById('App') );
