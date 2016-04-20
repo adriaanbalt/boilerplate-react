@@ -4,9 +4,9 @@ var config = require('../config');
 var htmlConfig = require('../config/html');
 var iconFontConfig = require('../config/iconFont');
 
-gulp.task('clean', function (cb) {
-  del([
+gulp.task('clean', (cb) => del([
     config.publicAssets,
     iconFontConfig.sassDest
-  ], cb);
-});
+  ], {
+    force: true
+  }, cb));
