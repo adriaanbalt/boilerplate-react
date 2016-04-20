@@ -6,10 +6,10 @@ $icons: sprite-map("icons/*.png", $layout: smart);
 	display: inline-block;
 }
 
-.icon-icon-Home {
-	@include get-sprite( Home );
+.icon-Share-Facebok {
+	@include get-sprite( Share-Facebook );
 	&:hover {
-		@include get-sprite( Home );
+		@include get-sprite( Share-Facebook );
 	}
 }
 
