@@ -31,9 +31,9 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import App from './App';
 import Config from './lib/Config';
-import pathJoin from './lib/utils/pathJoin';
+import pathJoin from './lib/pathJoin';
 
-import Home from './home/Home';
+import Home from './pages/Home';
 
 // If we ever wanted to do server-side rendering, the intial state would get passed to the front end by passing
 // the server-side store to the "__INITIAL_STATE__" client-side global variable via a script tag and "hydrating"
