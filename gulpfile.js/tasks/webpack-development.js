@@ -6,18 +6,18 @@ var logger       = require('../lib/compileLogger')
 var webpack      = require('webpack')
 
 gulp.task('webpack:development', function(callback) {
-
+  console.log ( 'webpack development', process.env.PORT );
   new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     contentBase: './public',
     hot: true,
     stats: { colors: true },
     historyApiFallback: true
-  }).listen(3000, 'localhost', function (err, result) {
+  }).listen(process.env.PORT, 'localhost', function (err, result) {
     if (err) {
       console.log(err);
     }
 
-    console.log('Listening at localhost:3000');
+    console.log('Listening at localhost:', process.env.PORT);
   });
 });

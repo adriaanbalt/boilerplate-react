@@ -13,5 +13,9 @@
 
 var requireDir = require('require-dir');
 
+require('dotenv').load({
+  path: '.env'
+});
+
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./tasks', { recurse: true });
