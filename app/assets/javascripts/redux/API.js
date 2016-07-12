@@ -7,8 +7,8 @@ import request from 'superagent';
 import Promise from 'bluebird';
 import _ from 'lodash';
 
-import pathJoin from '../lib/utils/pathJoin';
-import isJSON from '../lib/utils/isJSON';
+import pathJoin from '../lib/pathJoin';
+import isJSON from '../lib/isJSON';
 import Config from '../lib/Config';
 import ActionCreator from './ActionCreator';
 
