@@ -9,7 +9,7 @@ import API from '../redux/API';
 import ActionCreator from '../redux/ActionCreator';
 import UI from '../lib/UI';
 import Config from '../lib/Config';
-import pathJoin from '../lib/utils/pathJoin';
+import pathJoin from '../lib/pathJoin';
 
 class Home extends UI {
 
