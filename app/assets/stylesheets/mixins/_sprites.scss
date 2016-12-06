@@ -1,9 +1,0 @@
-// we could make this responsive if we want.
-
-@import "compass/utilities/sprites";
-@mixin get-sprite( $imgName ) {
-  background-position: round(nth(sprite-position($icons, $imgName), 1) / 2) round(nth(sprite-position($icons, $imgName), 2) / 2);
-  background-size: (image-width(sprite-path($icons)) / 2) (image-height(sprite-path($icons)) / 2);
-  height: image-height(sprite-file($icons, $imgName)) / 2;
-  width: image-width(sprite-file($icons, $imgName)) / 2;
-}
